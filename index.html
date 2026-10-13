@@ -1,66 +1,321 @@
-<!-- CODIGO ABIERTO BY YUNG SAMY - DISCORD: likeadversario
-     GITHUB: https://github.com/yungsamy4p/fdn-portal
-     INSTAGRAM: https://www.instagram.com/yungsamy4p -->
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FDN — Manual de Operaciones del Bot Táctico</title>
-
-    <link rel="icon" type="image/png" href="logo-fdn.png">
-
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MANUAL OPERATIVO // UNITED STATES MARSHALS SERVICE</title>
+  <link rel="icon" type="image/png" href="USMS.png">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Teko:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header class="tactical-header">
-        <div class="header-content">
-            <div class="insignia-box">
-                <span class="nato-code">FDN-SYS // CUARTO REGIMIENTO</span>
-                <h1>MANUAL DEL SISTEMA BOT</h1>
-                <p>Centro de Comando, Control y Telecomunicaciones — Doctrina Virtus</p>
-            </div>
-            <div class="system-status">
-                <span class="status-dot"></span> RED DISCORD ONLINE
-            </div>
+  <!-- HEADER TÁCTICO -->
+  <header class="tactical-header">
+    <div class="logo-area">
+      <img src="USMS.png" alt="Insignia U.S. Marshals" class="insignia-img">
+      <div>
+        <h1>UNITED STATES MARSHALS SERVICE</h1>
+        <p class="subtitle">MANUAL DE FORMACIÓN, DESPACHO Y PROCEDIMIENTOS OPERATIVOS • MYSTICOS RP</p>
+      </div>
+    </div>
+    <div class="header-actions">
+      <div class="status-indicator">
+        <span class="blink">●</span> TERMINAL DE DOCTRINA ACTIVA
+      </div>
+    </div>
+  </header>
+
+  <div class="layout-wrapper">
+    <!-- BARRA LATERAL DE NAVEGACIÓN -->
+    <aside class="sidebar">
+      <div class="sidebar-title">[ ÍNDICE GENERAL ]</div>
+      <nav class="sidebar-nav">
+        <button class="nav-btn active" data-tab="formacion">⭐ 01. Formación e Ingreso</button>
+        <button class="nav-btn" data-tab="comandos">🤖 02. Operación del Bot</button>
+        <button class="nav-btn" data-tab="divisiones">🛡️ 03. Divisiones Operativas</button>
+        <button class="nav-btn" data-tab="fuerza">⚖️ 04. Uso de la Fuerza</button>
+        <button class="nav-btn" data-tab="procedimientos">🚓 05. Procedimientos y 10-55</button>
+        <button class="nav-btn" data-tab="codigos">🎙️ 06. Códigos Radiales 10</button>
+      </nav>
+
+      <!-- TARJETA RÁPIDA DE DERECHOS MIRANDA -->
+      <div class="miranda-card">
+        <div class="miranda-header">
+          <span>⚖️ ADVERTENCIA MIRANDA</span>
+          <button id="copyMirandaBtn" class="copy-pill">COPIAR</button>
         </div>
-    </header>
+        <p id="mirandaText">"Tiene derecho a guardar silencio. Cualquier cosa que diga puede y será usada en su contra ante un tribunal federal. Tiene derecho a consultar con un abogado y a que este se encuentre presente durante cualquier interrogatorio. Si no puede pagar un abogado, el estado le asignará uno si así lo desea. ¿Ha entendido estos derechos tal y como se los he leído?"</p>
+      </div>
+    </aside>
 
-    <main class="container">
-        <!-- Barra de búsqueda y filtros -->
-        <section class="controls-panel">
-            <input type="text" id="searchInput" placeholder="Filtrar comando por nombre o parámetro (ej: /fichar, pda, expediente)..." autocomplete="off">
-            
-            <div class="filter-pills">
-                <button class="pill active" data-category="all">Todos</button>
-                <button class="pill" data-category="registro">Fichaje & Guardia</button>
-                <button class="pill" data-category="documental">Expedientes & Censo</button>
-                <button class="pill" data-category="mando">Alto Mando & Bajas</button>
-                <button class="pill" data-category="disciplina">Disciplina & Permisos</button>
-                <button class="pill" data-category="aerea">Fuerza Aérea</button>
-                <!-- NUEVA CATEGORÍA VEHICULAR INTEGRADA -->
-                <button class="pill" data-category="vehicular">Depósito & Vehículos</button>
-                <button class="pill" data-category="soporte">Soporte & Sistema</button>
+    <!-- ÁREA PRINCIPAL DE CONTENIDO -->
+    <main class="content-area">
+
+      <!-- SECCIÓN 1: FORMACIÓN E INGRESO -->
+      <section id="formacion" class="tab-pane active">
+        <div class="panel">
+          <h2 class="panel-title">[01] PROTOCOLO DE FORMACIÓN Y ESCALAFÓN FEDERAL</h2>
+          
+          <div class="doc-block">
+            <h3>1.1 Misión Constitucional del Deputy Marshal</h3>
+            <p>El United States Marshals Service (USMS) es la agencia federal de ley y orden más antigua de la nación. En el Distrito de Mysticos RP, cada oficial vela por la seguridad de los magistrados, la ejecución rigurosa de mandatos judiciales, el traslado y custodia penitenciaria de alta peligrosidad, y la localización prioritaria de fugitivos procesados.</p>
+          </div>
+
+          <div class="doc-block">
+            <h3>1.2 Proceso de Instrucción y Fase de Prueba</h3>
+            <ul class="styled-list">
+              <li><strong>Fase 1 - Reclutamiento & Legajo:</strong> Verificación de antecedentes limpios, registro web formal y asignación de Badge (#).</li>
+              <li><strong>Fase 2 - Marshal Trainee & Probationary:</strong> Período tutelado. Todo procedimiento debe ser supervisado por un Deputy U.S. Marshal II o superior. Queda prohibido patrullar en solitario.</li>
+              <li><strong>Fase 3 - Juramento Distrital:</strong> Compromiso ético y procesal ante la Supervisión del Distrito. Concesión plena de portación de armas reglamentarias y facultades de aprehensión.</li>
+            </ul>
+          </div>
+
+          <div class="doc-block">
+            <h3>1.3 Jerarquía de Mando Federal</h3>
+            <div class="grid-table">
+              <div class="table-row head"><span>Escalafón</span><span>Denominación Oficial</span><span>Rol / Facultad</span></div>
+              <div class="table-row"><span>Dirección</span><span>Director / Deputy Director</span><span>Comando estratégico global y enlace judicial</span></div>
+              <div class="table-row"><span>Jefatura</span><span>Chief Deputy / Assistant Chief</span><span>Administración de recursos, ascensos y disciplina</span></div>
+              <div class="table-row"><span>Supervisión</span><span>Chief Inspector / Supervisory Deputy</span><span>Mando táctico en escena y resolución de quejas</span></div>
+              <div class="table-row"><span>Tropa Federal</span><span>Master / Senior / Deputy I & II</span><span>Operaciones de campo, patrullaje y traslados</span></div>
+              <div class="table-row"><span>Academia</span><span>Probationary / Trainee</span><span>Oficiales en formación bajo instrucción</span></div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <section class="command-grid" id="commandGrid">
-            
-        </section>
+      <!-- SECCIÓN 2: MANUAL DE OPERACIÓN DEL BOT -->
+      <section id="comandos" class="tab-pane">
+        <div class="panel">
+          <h2 class="panel-title">[02] GUÍA OPERATIVA DEL SISTEMA CENTRAL (DISCORD BOT)</h2>
+          <p class="section-desc">Todos los oficiales deben registrar sus turnos de servicio y diligencias mediante el bot para garantizar la validez legal y el cómputo de sus horas semanales.</p>
+
+          <div class="cards-grid">
+            <div class="tactical-card">
+              <div class="card-tag">COMANDO DE CAMPO</div>
+              <h4>/fichar entrada</h4>
+              <p>Inicia tu jornada de servicio activo de patrullaje general. Comienza a registrar tu tiempo operativo en la base de datos central.</p>
+            </div>
+
+            <div class="tactical-card highlight">
+              <div class="card-tag">BONIFICACIÓN x1.5</div>
+              <h4>/fichar guardia</h4>
+              <p>Inicia turno de custodia judicial, vigilancia de salas de audiencia o traslados penitenciarios de alto riesgo. Multiplica el cómputo por 1.5.</p>
+            </div>
+
+            <div class="tactical-card">
+              <div class="card-tag">DESPACHO / ATC</div>
+              <h4>/fichar torre</h4>
+              <p>Fichaje exclusivo para operadores de comunicaciones federales y control de tráfico de aeronaves y convoys.</p>
+            </div>
+
+            <div class="tactical-card danger">
+              <div class="card-tag">CIERRE</div>
+              <h4>/fichar salida</h4>
+              <p>Finaliza la guardia activa, computa las horas acumuladas en la semana y actualiza el panel táctico de fuerza desplegada.</p>
+            </div>
+
+            <div class="tactical-card">
+              <div class="card-tag">EXPEDIENTE</div>
+              <h4>/expediente [oficial/placa]</h4>
+              <p>Consulta la foja de servicio, número de Badge, divisiones asignadas, horas semanales y total de strikes en Asuntos Internos.</p>
+            </div>
+
+            <div class="tactical-card">
+              <div class="card-tag">ADMINISTRATIVO</div>
+              <h4>/justificar</h4>
+              <p>Abre el formulario oficial para solicitar licencias médicas o justificar inactividad programada ante la Supervisión.</p>
+            </div>
+
+            <div class="tactical-card">
+              <div class="card-tag">AERONAVES</div>
+              <h4>/aeronave-consultar [tag]</h4>
+              <p>Verifica en el radar federal el estatus, matrícula y propietario de un helicóptero o avión en jurisdicción.</p>
+            </div>
+
+            <div class="tactical-card">
+              <div class="card-tag">ASUNTOS INTERNOS</div>
+              <h4>/sancionar & /ck</h4>
+              <p>Comandos exclusivos para la Supervisión y Dirección de Distrito para impartir medidas disciplinarias o formalizar actas de defunción procesal.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN 3: DIVISIONES OPERATIVAS -->
+      <section id="divisiones" class="tab-pane">
+        <div class="panel">
+          <h2 class="panel-title">[03] CUERPOS Y DIVISIONES ESPECIALIZADAS</h2>
+          
+          <div class="division-box">
+            <div class="div-badge">PSD</div>
+            <div class="div-info">
+              <h3>PSD – Patrol Division (División de Patrullaje)</h3>
+              <p><strong>Propósito:</strong> Presencia disuasoria y respuesta inmediata en carreteras interestatales y condados. Custodia el orden público federal y responde a códigos de emergencia emitidos por tribunales locales.</p>
+            </div>
+          </div>
+
+          <div class="division-box">
+            <div class="div-badge">FTF</div>
+            <div class="div-info">
+              <h3>FTF – Fugitive Task Force (Fugitive Hunter)</h3>
+              <p><strong>Propósito:</strong> Unidad especializada en labores de rastreo, emboscadas controladas y captura de prófugos de la justicia catalogados en la lista de los más buscados del distrito judicial.</p>
+            </div>
+          </div>
+
+          <div class="division-box">
+            <div class="div-badge">CNT</div>
+            <div class="div-info">
+              <h3>CNT – Narcotics Investigator (Investigación Antinarcóticos)</h3>
+              <p><strong>Propósito:</strong> Operaciones encubiertas e interdicción de cargamentos a gran escala. Recompilación de evidencia procesal y desmantelamiento de redes de tráfico y sustancias controladas.</p>
+            </div>
+          </div>
+
+          <div class="division-box">
+            <div class="div-badge">SOG</div>
+            <div class="div-info">
+              <h3>SOG – Special Operations Group (Operaciones Tácticas)</h3>
+              <p><strong>Propósito:</strong> Rama táctica de asalto federal. Interviene en tomas de rehenes, allanamientos de alto riesgo, atrincheramientos armados y contención antiterrorista.</p>
+            </div>
+          </div>
+
+          <div class="division-box">
+            <div class="div-badge">K-9</div>
+            <div class="div-info">
+              <h3>K-9 Unit (Unidad Canina de Intervención)</h3>
+              <p><strong>Propósito:</strong> Guías caninos adiestrados para el rastreo balístico, detección de narcóticos/explosivos y neutralización física no letal de sospechosos en fuga.</p>
+            </div>
+          </div>
+
+          <div class="division-box">
+            <div class="div-badge">ASD</div>
+            <div class="div-info">
+              <h3>ASD – Air Support Division (Soporte Aéreo)</h3>
+              <p><strong>Propósito:</strong> Reconocimiento aéreo, persecuciones coordinadas por aire, patrullaje con cámaras térmicas y extracción de efectivos en zonas hostiles.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN 4: USO DE LA FUERZA -->
+      <section id="fuerza" class="tab-pane">
+        <div class="panel">
+          <h2 class="panel-title">[04] ESCALA PROGRESIVA DEL USO DE LA FUERZA</h2>
+          <p class="section-desc">El oficial del USMS debe actuar bajo el estándar de proporcionalidad y necesidad estricta. Todo salto de nivel no justificado será remitido a Asuntos Internos.</p>
+
+          <div class="force-level lvl-1">
+            <div class="lvl-num">NIVEL 1</div>
+            <div class="lvl-desc">
+              <h4>Presencia Federal</h4>
+              <p>Uniformidad reglamentaria, postura firme y vehículo patrulla visible. La sola presencia disuade la alteración del orden.</p>
+            </div>
+          </div>
+
+          <div class="force-level lvl-2">
+            <div class="lvl-num">NIVEL 2</div>
+            <div class="lvl-desc">
+              <h4>Órdenes Verbales</h4>
+              <p>Mandos de voz claros, directos y respetuosos ("¡Alto al U.S. Marshals!", "¡Manos donde pueda verlas!"). Sin insultos ni vacilaciones.</p>
+            </div>
+          </div>
+
+          <div class="force-level lvl-3">
+            <div class="lvl-num">NIVEL 3</div>
+            <div class="lvl-desc">
+              <h4>Control Físico y Sujeción Suave</h4>
+              <p>Técnicas de agarre, reducción articular e inmovilización de muñecas con esposas reglamentarias ante resistencia pasiva.</p>
+            </div>
+          </div>
+
+          <div class="force-level lvl-4">
+            <div class="lvl-num">NIVEL 4</div>
+            <div class="lvl-desc">
+              <h4>Armamento Menos Letal</h4>
+              <p>Uso de Taser X26, porra PR-24, spray pimienta o munición de beanbag ante agresión física activa sin armas letales.</p>
+            </div>
+          </div>
+
+          <div class="force-level lvl-5">
+            <div class="lvl-num">NIVEL 5</div>
+            <div class="lvl-desc">
+              <h4>Fuerza Letal</h4>
+              <p>Uso de armas de fuego reglamentarias. Únicamente autorizado ante riesgo inminente de muerte o lesiones graves hacia el oficial o terceros.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN 5: PROCEDIMIENTOS Y 10-55 -->
+      <section id="procedimientos" class="tab-pane">
+        <div class="panel">
+          <h2 class="panel-title">[05] PROCEDIMIENTOS TÁCTICOS Y DETENCIÓN VEHICULAR (10-55)</h2>
+          
+          <div class="doc-block">
+            <h3>Protocolo Obligatorio en Parada de Tráfico (10-55)</h3>
+            <ol class="styled-numbered-list">
+              <li><strong>Notificación Radial previa:</strong> Cantar por malla: <em>"10-55 en [Zona], sobre vehículo [Modelo], color [Color], [Número de ocupantes], 10-20 [Ubicación exacta]"</em>.</li>
+              <li><strong>Posicionamiento del Móvil:</strong> Estacionar a 3-5 metros detrás, en ángulo diagonal hacia la izquierda para proteger la línea del oficial de posibles atropellos.</li>
+              <li><strong>Aproximación Segura:</strong> Iluminar cabina con reflector si es de noche. Tocar suavemente el maletero con la mano derecha para asentar huella dactilar y verificar que esté bien cerrado.</li>
+              <li><strong>Contacto Inicial:</strong> Saludar cordialmente, identificarse: <em>"Buenos días/tardes, Deputy [Apellido] del United States Marshals Service. El motivo de su detención es..."</em>.</li>
+              <li><strong>Requerimiento Documental:</strong> Solicitar identificación oficial, registro del vehículo y seguro vigente manteniendo visión de las manos del conductor en todo momento.</li>
+            </ol>
+          </div>
+
+          <div class="doc-block">
+            <h3>Cadena de Custodia y Traslado a Prisión</h3>
+            <p>Todo individuo esposado debe ser revisado superficialmente en busca de armas. Inmediatamente se leen los <strong>Derechos Miranda</strong>. Al ingresar a la celda federal o penitenciaría, el oficial debe redactar el acta judicial correspondiente utilizando el sistema del bot o el canal distrital habilitado.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN 6: CÓDIGOS RADIALES 10 -->
+      <section id="codigos" class="tab-pane">
+        <div class="panel">
+          <h2 class="panel-title">[06] CÓDIGOS RADIALES FEDERALES (CÓDIGO 10)</h2>
+          <div class="search-box">
+            <input type="text" id="codeSearch" placeholder="Filtrar por código o significado (ej: 10-20, oficial caído, persecución)...">
+          </div>
+
+          <div class="codes-table-container">
+            <table class="tactical-table" id="codesTable">
+              <thead>
+                <tr>
+                  <th>Código</th>
+                  <th>Significado Operativo</th>
+                  <th>Prioridad</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>10-00</strong></td><td>Oficial caído / Emergencia máxima en frecuencia</td><td><span class="badge danger">CRÍTICO</span></td></tr>
+                <tr><td><strong>10-04</strong></td><td>Afirmativo / Recibido / Entendido</td><td><span class="badge info">NORMAL</span></td></tr>
+                <tr><td><strong>10-06</strong></td><td>Ocupado / No disponible para despachos</td><td><span class="badge info">NORMAL</span></td></tr>
+                <tr><td><strong>10-07</strong></td><td>Fuera de servicio / Retiro a cuartel</td><td><span class="badge info">NORMAL</span></td></tr>
+                <tr><td><strong>10-08</strong></td><td>En servicio disponible para llamadas</td><td><span class="badge success">DISPONIBLE</span></td></tr>
+                <tr><td><strong>10-10</strong></td><td>Pelea / Reyerta en curso</td><td><span class="badge warn">MEDIO</span></td></tr>
+                <tr><td><strong>10-15</strong></td><td>Sospechoso bajo custodia en móvil</td><td><span class="badge success">PROCESAL</span></td></tr>
+                <tr><td><strong>10-20</strong></td><td>Ubicación exacta actual</td><td><span class="badge info">RUTINA</span></td></tr>
+                <tr><td><strong>10-33</strong></td><td>Silencio en radio / Solo tráfico de emergencia</td><td><span class="badge danger">CRÍTICO</span></td></tr>
+                <tr><td><strong>10-50</strong></td><td>Accidente de tránsito</td><td><span class="badge warn">MEDIO</span></td></tr>
+                <tr><td><strong>10-55</strong></td><td>Parada de tráfico a vehículo sospechoso</td><td><span class="badge info">RUTINA</span></td></tr>
+                <tr><td><strong>10-70</strong></td><td>Soporte / Refuerzos urgentes requeridos</td><td><span class="badge danger">ALTO</span></td></tr>
+                <tr><td><strong>10-80</strong></td><td>Persecución vehicular activa</td><td><span class="badge danger">ALTO</span></td></tr>
+                <tr><td><strong>10-90</strong></td><td>Robo a banco / Establecimiento federal en curso</td><td><span class="badge danger">CRÍTICO</span></td></tr>
+                <tr><td><strong>10-99</strong></td><td>Situación concluida / Código 4</td><td><span class="badge success">DESPEJADO</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
     </main>
+  </div>
 
-    <footer class="tactical-footer">
-        <p>FUERZA DE DEFENSA NACIONAL • DEPARTAMENTO DE SECRETARÍA Y TECNOLOGÍAS DE LA INFORMACIÓN</p>
-        <p class="subtext">USO EXCLUSIVO PARA EFECTIVOS ACTIVOS EN FORT ZANCUDO</p>
-    </footer>
+  <footer class="tactical-footer">
+    <p>UNITED STATES MARSHALS SERVICE • DISTRITO DE MYSTICOS RP</p>
+    <p class="credits">SISTEMA CREADO Y ADAPTADO POR YUNG SAMY // DISCORD: likeadversario</p>
+  </footer>
 
-    <div id="toast" class="toast">Comando copiado al portapapeles</div>
-
-    <script src="app.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
